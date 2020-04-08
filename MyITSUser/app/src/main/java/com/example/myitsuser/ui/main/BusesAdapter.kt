@@ -8,12 +8,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.myitsuser.R
 import com.example.myitsuser.models.BusInfo
 
-class BusesAdapter(private val listener: BusClickListener) : RecyclerView.Adapter<BusesAdapter.BusesViewHolder>() {
+class BusesAdapter(private val listener: BusClickListener) :
+    RecyclerView.Adapter<BusesAdapter.BusesViewHolder>() {
 
     private var data = mutableListOf<BusInfo>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BusesViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.bus_list_item, parent, false)
+        val view =
+            LayoutInflater.from(parent.context).inflate(R.layout.bus_list_item, parent, false)
         return BusesViewHolder(view)
     }
 

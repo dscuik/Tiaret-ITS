@@ -4,7 +4,7 @@ import com.example.myitsuser.models.BusInfo
 
 interface BusClickListener {
 
-    fun onBusClick(busInfo : BusInfo)
+    fun onBusClick(busInfo: BusInfo)
 
     fun onFinishLoading()
 }

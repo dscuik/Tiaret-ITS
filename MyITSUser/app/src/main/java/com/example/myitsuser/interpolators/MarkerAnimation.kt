@@ -4,13 +4,16 @@ package com.example.myitsuser.interpolators
 import android.os.Handler
 import android.os.SystemClock
 import android.view.animation.AccelerateDecelerateInterpolator
-import android.view.animation.Interpolator
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 
 object MarkerAnimation {
 
-    fun animateMarkerToGB(marker: Marker, finalPosition: LatLng, latLngInterpolator: LatLngInterpolator) {
+    fun animateMarkerToGB(
+        marker: Marker,
+        finalPosition: LatLng,
+        latLngInterpolator: LatLngInterpolator
+    ) {
         val startPosition = marker.position
         val handler = Handler()
         val start = SystemClock.uptimeMillis()

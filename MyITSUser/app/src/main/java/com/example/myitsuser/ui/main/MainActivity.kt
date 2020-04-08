@@ -7,7 +7,6 @@ import android.content.pm.PackageManager
 import android.location.LocationManager
 import android.os.Bundle
 import android.provider.Settings
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -45,7 +44,11 @@ class MainActivity : AppCompatActivity(), BusClickListener {
                 this, Manifest.permission.ACCESS_COARSE_LOCATION
             ) != PackageManager.PERMISSION_GRANTED
         ) {
-            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), 55)
+            ActivityCompat.requestPermissions(
+                this,
+                arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
+                55
+            )
         }
     }
 
@@ -118,7 +121,8 @@ class MainActivity : AppCompatActivity(), BusClickListener {
         }
 
         if (!Utils.isNetworkConnected(this)) {
-            Toast.makeText(this, "Please Check out your internet connection.", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Please Check out your internet connection.", Toast.LENGTH_LONG)
+                .show()
             return
         }
 

@@ -16,8 +16,8 @@ interface LatLngInterpolator {
             val fromLng = toRadians(from.longitude)
             val toLat = toRadians(to.latitude)
             val toLng = toRadians(to.longitude)
-            val cosFromLat = cos(fromLat)
-            val cosToLat = cos(toLat)
+            val cosFromLat = kotlin.math.cos(fromLat)
+            val cosToLat = kotlin.math.cos(toLat)
 
             val angle = computeAngleBetween(fromLat, fromLng, toLat, toLng)
             val sinAngle = sin(angle)
@@ -36,10 +36,22 @@ interface LatLngInterpolator {
             return LatLng(toDegrees(lat), toDegrees(lng))
         }
 
-        private fun computeAngleBetween(fromLat: Double, fromLng: Double, toLat: Double, toLng: Double): Double {
+        private fun computeAngleBetween(
+            fromLat: Double,
+            fromLng: Double,
+            toLat: Double,
+            toLng: Double
+        ): Double {
             val dLat = fromLat - toLat
             val dLng = fromLng - toLng
-            return 2 * asin(sqrt(pow(sin(dLat / 2), 2.0) + cos(fromLat) * cos(toLat) * pow(sin(dLng / 2), 2.0)))
+            return 2 * asin(
+                sqrt(
+                    pow(
+                        sin(dLat / 2),
+                        2.0
+                    ) + cos(fromLat) * cos(toLat) * pow(sin(dLng / 2), 2.0)
+                )
+            )
         }
     }
 }
