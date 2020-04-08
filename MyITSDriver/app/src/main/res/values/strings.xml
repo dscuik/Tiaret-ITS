@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My ITS Driver</string>
+    <string name="action_add">Add Bus</string>
+    <string name="title_add_bus_activity">Add Bus</string>
+</resources>

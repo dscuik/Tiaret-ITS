@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                   xmlns:tools="http://schemas.android.com/tools"
+                                   android:orientation="vertical"
+                                   android:layout_width="match_parent"
+                                   app:cardCornerRadius="48dp"
+                                   android:layout_marginTop="16dp"
+                                   android:layout_marginBottom="8dp"
+                                   android:layout_marginEnd="16dp"
+                                   android:layout_marginStart="16dp"
+                                   android:layout_height="96dp">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+                                                       android:layout_height="match_parent">
+
+        <ImageView android:layout_width="48dp" android:src="@drawable/ic_directions_bus_list"
+                   android:layout_height="48dp"
+                   android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+                   android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+                   android:contentDescription="@null" android:id="@+id/imageView"/>
+
+        <TextView android:layout_width="wrap_content"
+                  android:id="@+id/busName"
+                  tools:text="Bus Number C3"
+                  android:textSize="21sp"
+                  android:fontFamily="sans-serif-medium"
+                  android:layout_marginStart="16dp"
+                  app:layout_constraintTop_toTopOf="@+id/imageView"
+                  android:layout_height="wrap_content" app:layout_constraintStart_toEndOf="@+id/imageView"
+        />
+
+        <TextView android:layout_width="0dp"
+                  android:lines="1"
+                  android:id="@+id/busPath"
+                  android:fontFamily="sans-serif-light"
+                  android:ellipsize="end"
+                  tools:text="From Frigo to Volani hjhkjhdqskjhkqsjhdkjqhskqshdkjqsh"
+                  android:textSize="15sp"
+                  android:layout_height="wrap_content"
+                  app:layout_constraintTop_toBottomOf="@+id/busName"
+                  app:layout_constraintStart_toStartOf="@+id/busName"
+                  android:layout_marginEnd="8dp"
+                  app:layout_constraintEnd_toStartOf="@+id/busPrice"
+                  app:layout_constraintHorizontal_bias="0.0"/>
+
+        <TextView android:layout_width="wrap_content"
+                  android:id="@+id/busPrice"
+                  tools:text="23DA"
+                  android:textSize="22sp"
+                  android:textColor="@color/colorPrimary"
+                  android:fontFamily="sans-serif-black"
+                  app:layout_constraintTop_toTopOf="parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
